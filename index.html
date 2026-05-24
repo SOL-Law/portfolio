@@ -1,791 +1,332 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio AI - Mai Văn Thuần</title>
-
+    <title>Mai Văn Thuần - Digital Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
-        rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
 </head>
+<body class="dark-mode">
+    <div class="stars"></div>
 
-<body>
-
-    <!-- PRELOADER -->
-
-    <div id="preloader">
-
-        <div class="loader"></div>
-
-    </div>
-
-    <!-- PARTICLES -->
-
-    <div id="particles-js"></div>
-
-    <!-- NAVBAR -->
-
+    <!-- Navigation -->
     <nav class="navbar">
-
-        <div class="logo">Portfolio AI</div>
-
-        <ul class="nav-links" id="navLinks">
-
-            <li><a href="#home">Trang Chủ</a></li>
-            <li><a href="#about">Giới Thiệu</a></li>
-            <li><a href="#projects">Bài Tập</a></li>
-            <li><a href="#summary">Tổng Kết</a></li>
-            <li><a href="#contact">Liên Hệ</a></li>
-
-        </ul>
-
-        <div class="nav-actions">
-
-            <button id="themeToggle">
-
-                <i class="fas fa-moon"></i>
-
-            </button>
-
-            <button class="menu-toggle" id="menuToggle">
-
-                <i class="fas fa-bars"></i>
-
-            </button>
-
+        <div class="logo">
+            <span class="logo-text">MVT</span><span class="logo-dot">.</span><span class="logo-accent">AI</span>
         </div>
-
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#intro" class="nav-link active">Giới Thiệu</a></li>
+            <li><a href="#journey" class="nav-link">Hành Trình</a></li>
+            <li><a href="#summary" class="nav-link">Tổng Kết</a></li>
+            <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="themeToggle" class="theme-btn" title="Toggle Dark/Light Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
-    <!-- HERO -->
-
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <div class="hero-text" data-aos="fade-right">
-
-                <h1>
-
-                    Xin chào, tôi là
-                    <span>Mai Văn Thuần</span>
-
+    <!-- Hero Section -->
+    <section class="hero" id="intro">
+        <div class="hero-container">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="hero-title">
+                    Xin chào, <br>tôi là <span class="accent-text">Mai Văn Thuần</span>
                 </h1>
-
-                <h2 id="typing"></h2>
-
-                <p>
-
-                    Sinh viên ngành Công Nghệ Thông Tin tại
-                    Đại Học Công Nghệ - ĐHQGHN.
-                    Yêu thích phát triển game,
-                    AI, VR/AR và công nghệ hiện đại.
-
+                <h2 class="hero-subtitle" id="typing-text"></h2>
+                <div class="hero-info">
+                    <p class="info-item"><strong>Mã SV:</strong> 25020411 | <strong>GPA:</strong> 3.65/4.0</p>
+                    <p class="info-item"><strong>Lớp:</strong> IT2 | <strong>Năm:</strong> 2026 | <strong>Trường:</strong> UET - VNU</p>
+                </div>
+                <p class="hero-description">
+                    Sinh viên năm nhất ngành <strong>CNTT</strong> tại <strong>Đại học Công nghệ - ĐHQGHN</strong>. 
+                    Đam mê <strong>Game Development</strong>, <strong>VR/AR</strong> và <strong>AI Prompt Engineering</strong>. 
+                    Chuyên tối ưu hóa quy trình làm việc bằng trí tuệ nhân tạo với nguyên tắc: 
+                    <em>"Hiểu mới dùng - AI là trợ lý, con người là thuyền trưởng"</em>.
+                    <br>
+                    Giao diện hỗ trợ <strong>chế độ sáng / tối</strong> để phù hợp mọi môi trường học tập và trình bày.
                 </p>
-
                 <div class="hero-buttons">
-
-                    <a href="#projects" class="btn">
-
-                        <i class="fas fa-folder-open"></i>
-                        Xem Bài Tập
-
-                    </a>
-
-                    <a href="#contact" class="btn secondary-btn">
-
-                        <i class="fas fa-envelope"></i>
-                        Liên Hệ
-
-                    </a>
-
+                    <a href="#journey" class="btn btn-primary">Xem Hành Trình</a>
+                    <a href="#summary" class="btn btn-secondary">Tầm Nhìn & Định Hướng</a>
+                    <a href="https://github.com/SOL-Law" target="_blank" class="btn btn-social"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.facebook.com/share/1BVrVRRhrX/?mibextid=wwXIfr" target="_blank" class="btn btn-social"><i class="fab fa-facebook"></i> Facebook</a>
                 </div>
-
-                <div class="social-links">
-
-                    <a href="https://github.com/SOL-Law"
-                        target="_blank">
-
-                        <i class="fab fa-github"></i>
-
-                    </a>
-
-                    <a href="https://www.facebook.com/share/1BVrVRRhrX/?mibextid=wwXIfr"
-                        target="_blank">
-
-                        <i class="fab fa-facebook-f"></i>
-
-                    </a>
-
+                <div class="hero-tags">
+                    <span class="tag">#GameDev</span>
+                    <span class="tag">#VR/AR</span>
+                    <span class="tag">#PromptEng</span>
+                    <span class="tag">#Metaverse</span>
+                    <span class="tag">#Python</span>
+                    <span class="tag">#Java</span>
                 </div>
-
             </div>
-
-            <div class="hero-image" data-aos="fade-left">
-
-                <img src="assets/images/avatar.jpg"
-                    alt="avatar">
-
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                <div class="avatar-frame">
+                    <img src="assets/images/avatar.jpg" alt="Avatar Mai Văn Thuần" onerror="this.src='https://via.placeholder.com/400x400?text=Avatar'">
+                </div>
             </div>
-
         </div>
-
     </section>
 
-    <!-- ABOUT -->
-
-    <section id="about">
-
+    <!-- Journey Section -->
+    <section class="journey" id="journey">
         <div class="section-title" data-aos="fade-up">
-
-            <h2>Giới Thiệu</h2>
-
+            <h2>Hành Trình Khám Phá & Minh Chứng</h2>
+            <p>6 bài học thực hành về quản lý dữ liệu, Prompt Engineering và Đạo đức AI</p>
         </div>
 
-        <div class="about-grid">
-
-            <div class="about-card" data-aos="zoom-in">
-
-                <i class="fas fa-user-graduate"></i>
-
-                <h3>Ngành Học</h3>
-
-                <p>Công Nghệ Thông Tin</p>
-
+        <div class="journey-layout">
+            <!-- Sidebar Tabs -->
+            <div class="journey-sidebar" data-aos="fade-right" data-aos-duration="1000">
+                <button class="tab-btn active" data-tab="bai1">
+                    <span class="tab-number">01</span>
+                    <span class="tab-title">Quản Lý Tệp & Dữ Liệu</span>
+                </button>
+                <button class="tab-btn" data-tab="bai2">
+                    <span class="tab-number">02</span>
+                    <span class="tab-title">Tìm Kiếm Thông Tin</span>
+                </button>
+                <button class="tab-btn" data-tab="bai3">
+                    <span class="tab-number">03</span>
+                    <span class="tab-title">Prompt Engineering</span>
+                </button>
+                <button class="tab-btn" data-tab="bai4">
+                    <span class="tab-number">04</span>
+                    <span class="tab-title">Hợp Tác Nhóm</span>
+                </button>
+                <button class="tab-btn" data-tab="bai5">
+                    <span class="tab-number">05</span>
+                    <span class="tab-title">Sáng Tạo Multi-Modal</span>
+                </button>
+                <button class="tab-btn" data-tab="bai6">
+                    <span class="tab-number">06</span>
+                    <span class="tab-title">Đạo Đức AI</span>
+                </button>
             </div>
 
-            <div class="about-card" data-aos="zoom-in">
-
-                <i class="fas fa-school"></i>
-
-                <h3>Trường Học</h3>
-
-                <p>Đại Học Công Nghệ - ĐHQGHN</p>
-
+            <!-- Content Display -->
+            <div class="journey-content glass-card" id="journey-display" data-aos="fade-left" data-aos-duration="1000">
+                <!-- Content will be populated by JavaScript -->
             </div>
-
-            <div class="about-card" data-aos="zoom-in">
-
-                <i class="fas fa-bullseye"></i>
-
-                <h3>Mục Tiêu</h3>
-
-                <p>
-
-                    Học hỏi và cập nhật xu hướng
-                    metaverse, VR/AR để mở rộng cơ hội.
-
-                </p>
-
-            </div>
-
-            <div class="about-card" data-aos="zoom-in">
-
-                <i class="fas fa-gamepad"></i>
-
-                <h3>Định Hướng</h3>
-
-                <p>
-
-                    Học thiết kế game 2D/3D,
-                    xây dựng nhân vật và hiệu ứng.
-
-                </p>
-
-            </div>
-
         </div>
-
-        <!-- SKILLS -->
-
-        <div class="skills-section">
-
-            <div class="skill-box" data-aos="fade-right">
-
-                <h3>Kỹ Năng</h3>
-
-                <div class="skill-item">
-
-                    <p>HTML/CSS</p>
-
-                    <div class="progress-bar">
-
-                        <div class="progress"
-                            style="width: 85%"></div>
-
-                    </div>
-
-                </div>
-
-                <div class="skill-item">
-
-                    <p>JavaScript</p>
-
-                    <div class="progress-bar">
-
-                        <div class="progress"
-                            style="width: 75%"></div>
-
-                    </div>
-
-                </div>
-
-                <div class="skill-item">
-
-                    <p>Java</p>
-
-                    <div class="progress-bar">
-
-                        <div class="progress"
-                            style="width: 80%"></div>
-
-                    </div>
-
-                </div>
-
-                <div class="skill-item">
-
-                    <p>Game Design</p>
-
-                    <div class="progress-bar">
-
-                        <div class="progress"
-                            style="width: 70%"></div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="skill-box" data-aos="fade-left">
-
-                <h3>Công Cụ Đã Dùng</h3>
-
-                <div class="tools-grid">
-
-                    <div class="tool-card">
-
-                        <i class="fab fa-github"></i>
-
-                        <p>GitHub</p>
-
-                    </div>
-
-                    <div class="tool-card">
-
-                        <i class="fab fa-figma"></i>
-
-                        <p>Figma</p>
-
-                    </div>
-
-                    <div class="tool-card">
-
-                        <i class="fas fa-code"></i>
-
-                        <p>VS Code</p>
-
-                    </div>
-
-                    <div class="tool-card">
-
-                        <i class="fas fa-robot"></i>
-
-                        <p>ChatGPT</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </section>
 
-    <!-- PROJECTS -->
-
-    <section id="projects">
-
+    <!-- Summary Section -->
+    <section class="summary" id="summary">
         <div class="section-title" data-aos="fade-up">
-
-            <h2>Bài Tập Học Phần</h2>
-
+            <h2>Tầm Nhìn & Định Hướng Phát Triển</h2>
+            <p>Chiến lược phát triển sự nghiệp dài hạn và nguyên tắc cốt lõi</p>
         </div>
 
-        <!-- STATS -->
-
-        <div class="stats-grid">
-
-            <div class="stat-card">
-
-                <h3>7</h3>
-
-                <p>Bài Báo Cáo</p>
-
+        <div class="summary-grid">
+            <div class="summary-card glass-card" data-aos="zoom-in" data-aos-duration="800">
+                <div class="summary-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Định Hướng 6 Tháng</h3>
+                <ul class="summary-list">
+                    <li>Thành thạo một game engine (Unity)</li>
+                    <li>Tạo 2-3 game nhỏ (Flappy Bird, Snake, Platformer)</li>
+                    <li>Làm quen VR/AR (XR Interaction Toolkit)</li>
+                    <li>Tích hợp AI vào sản phẩm (ChatGPT API cho NPC)</li>
+                </ul>
             </div>
 
-            <div class="stat-card">
-
-                <h3>100%</h3>
-
-                <p>Hoàn Thành</p>
-
+            <div class="summary-card glass-card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+                <div class="summary-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Định Hướng 1-2 Năm</h3>
+                <ul class="summary-list">
+                    <li>Học thiết kế game 2D & 3D chuyên sâu</li>
+                    <li>Xây dựng nhân vật & hiệu ứng (Blender, Spine)</li>
+                    <li>Tham gia phát triển sản phẩm thực tế</li>
+                    <li>Cập nhật xu hướng Metaverse & VR/AR</li>
+                </ul>
             </div>
 
-            <div class="stat-card">
-
-                <h3>AI</h3>
-
-                <p>Công Nghệ Chính</p>
-
+            <div class="summary-card glass-card" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                <div class="summary-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Định Hướng Dài Hạn (3-5 năm)</h3>
+                <ul class="summary-list">
+                    <li>Game Developer chuyên nghiệp (VNG, Gamota)</li>
+                    <li>Sản phẩm VR/AR ứng dụng giáo dục & giải trí</li>
+                    <li>Đóng góp cộng đồng về Đạo đức AI</li>
+                    <li>Xây dựng thương hiệu cá nhân (LinkedIn, GitHub)</li>
+                </ul>
             </div>
-
         </div>
 
-        <!-- SEARCH -->
-
-        <div class="search-box">
-
-            <input type="text"
-                id="searchInput"
-                placeholder="Tìm kiếm bài tập...">
-
+        <div class="objectives-section glass-card" data-aos="fade-up">
+            <h3><i class="fas fa-bullseye"></i> Mục Tiêu Học Tập Sau Môn Học</h3>
+            <div class="objectives-grid">
+                <div class="objective-item">
+                    <span class="obj-number">1</span>
+                    <div class="obj-content">
+                        <h4>Prompt Engineering Thành Thạo</h4>
+                        <p>Áp dụng Role Prompting, Chain-of-Thought, Few-shot learning vào tác vụ học tập; biến AI thành gia sư cá nhân</p>
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <span class="obj-number">2</span>
+                    <div class="obj-content">
+                        <h4>Đánh Giá Độ Tin Cậy Thông Tin</h4>
+                        <p>Thành thạo toán tử tìm kiếm (site:, filetype:, "..."); phân biệt nguồn học thuật uy tín vs không qua bình duyệt</p>
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <span class="obj-number">3</span>
+                    <div class="obj-content">
+                        <h4>Công Cụ Quản Lý & Hợp Tác</h4>
+                        <p>Làm chủ Trello, Discord, Google Workspace; quản lý dự án và giao tiếp nhóm hiệu quả</p>
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <span class="obj-number">4</span>
+                    <div class="obj-content">
+                        <h4>Sáng Tạo Kết Hợp AI</h4>
+                        <p>Tạo sản phẩm chất lượng với chất xám cá nhân >60%; phát hiện và sửa lỗi hallucination</p>
+                    </div>
+                </div>
+                <div class="objective-item">
+                    <span class="obj-number">5</span>
+                    <div class="obj-content">
+                        <h4>Nguyên Tắc Đạo Đức AI</h4>
+                        <p>Xây dựng 7 nguyên tắc cá nhân: AI là Trợ lý, Hiểu mới dùng, Kiểm chứng, Bảo mật, Minh bạch, Tư duy, Cá nhân hóa</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- PROJECT LAYOUT -->
-
-        <div class="project-layout">
-
-            <!-- SIDEBAR -->
-
-            <div class="sidebar-tabs">
-
-                <button class="tab-btn active"
-                    data-tab="bai1">
-
-                    Bài 1
-
-                </button>
-
-                <button class="tab-btn"
-                    data-tab="bai2">
-
-                    Bài 2
-
-                </button>
-
-                <button class="tab-btn"
-                    data-tab="bai3">
-
-                    Bài 3
-
-                </button>
-
-                <button class="tab-btn"
-                    data-tab="bai4">
-
-                    Bài 4
-
-                </button>
-
-                <button class="tab-btn"
-                    data-tab="bai5">
-
-                    Bài 5
-
-                </button>
-
-                <button class="tab-btn"
-                    data-tab="bai6">
-
-                    Bài 6
-
-                </button>
-
-                <button class="tab-btn"
-                    data-tab="bai7">
-
-                    Bài 7
-
-                </button>
-
-            </div>
-
-            <!-- CONTENT -->
-
-            <div class="project-content">
-
-                <!-- BAI 1 -->
-
-                <div class="tab-content active"
-                    id="bai1">
-
-                    <div class="project-card">
-
-                        <h2>Bài 1 - Quản Lý Tệp Và Thư Mục</h2>
-
-                        <p>
-
-                            Nội dung báo cáo PDF của bài tập.
-
-                        </p>
-
-                        <div class="file-buttons">
-
-                            <a href="files/baocao1.pdf"
-                                target="_blank"
-                                class="btn">
-
-                                <i class="fas fa-file-pdf"></i>
-                                Mở PDF
-
-                            </a>
-
-                            <a href="files/baocao1.pdf"
-                                download
-                                class="btn secondary-btn">
-
-                                <i class="fas fa-download"></i>
-                                Tải PDF
-
-                            </a>
-
-                        </div>
-
-                        <div class="pdf-viewer">
-
-                            <iframe
-                                src="files/baocao1.pdf">
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- BAI 2 -->
-
-                <div class="tab-content"
-                    id="bai2">
-
-                    <div class="project-card">
-
-                        <h2>Bài 2 - Tìm Kiếm Và Đánh Giá Thông Tin</h2>
-
-                        <div class="file-buttons">
-
-                            <a href="files/baocao2.pdf"
-                                target="_blank"
-                                class="btn">
-
-                                <i class="fas fa-file-pdf"></i>
-                                Mở PDF
-
-                            </a>
-
-                        </div>
-
-                        <div class="pdf-viewer">
-
-                            <iframe
-                                src="files/baocao2.pdf">
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- BAI 3 -->
-
-                <div class="tab-content"
-                    id="bai3">
-
-                    <div class="project-card">
-
-                        <h2>Bài 3 - Viết Prompt Hiệu Quả</h2>
-
-                        <div class="pdf-viewer">
-
-                            <iframe
-                                src="files/baocao3.pdf">
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- BAI 4 -->
-
-                <div class="tab-content"
-                    id="bai4">
-
-                    <div class="project-card">
-
-                        <h2>Bài 4 - Hợp Tác Trực Tuyến</h2>
-
-                        <div class="pdf-viewer">
-
-                            <iframe
-                                src="files/baocao4.pdf">
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- BAI 5 -->
-
-                <div class="tab-content"
-                    id="bai5">
-
-                    <div class="project-card">
-
-                        <h2>Bài 5 - Sáng Tạo Nội Dung Với AI</h2>
-
-                        <div class="pdf-viewer">
-
-                            <iframe
-                                src="files/baocao5.pdf">
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- BAI 6 -->
-
-                <div class="tab-content"
-                    id="bai6">
-
-                    <div class="project-card">
-
-                        <h2>Bài 6 - AI Có Trách Nhiệm</h2>
-
-                        <div class="pdf-viewer">
-
-                            <iframe
-                                src="files/baocao6.pdf">
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- BAI 7 -->
-
-                <div class="tab-content"
-                    id="bai7">
-
-                    <div class="project-card">
-
-                        <h2>Bài 7 - Tổng Kết Học Phần</h2>
-
-                        <div class="pdf-viewer">
-
-                            <iframe
-                                src="files/baocao7.pdf">
-
-                            </iframe>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="journey-reflection glass-card" data-aos="fade-up">
+            <h3><i class="fas fa-lightbulb"></i> Trải Nghiệm & Cảm Nhận Cá Nhân</h3>
+            <p>
+                Quá trình làm 6 bài tập từ cơ bản (quản lý file) đến nâng cao (đạo đức AI) đã giúp tôi thực sự "lột xác" về tư duy số. 
+                Tôi tự hào vì đã không chỉ dùng AI như một công cụ thụ động mà biết cách điều khiển, chỉnh sửa và tích hợp nó vào 
+                quy trình sáng tạo của riêng mình. 
+            </p>
+            <p>
+                <strong>Kiến thức quan trọng nhất:</strong> Prompt Engineering để biến AI thành gia sư thông minh • Đánh giá nguồn tin học thuật 
+                • Tích hợp AI vào sản phẩm (kết hợp ChatGPT + DALL-E + Canva) • Quản lý dự án nhóm chuyên nghiệp • Đạo đức AI có trách nhiệm
+            </p>
+            <p>
+                <strong>Tâm đắc nhất:</strong> Kỹ thuật Chain-of-Thought (CoT) đã tạo ra bộ câu hỏi ôn tập Bloom chỉ trong vài giây. 
+                Phát hiện và sửa lỗi hallucination của DALL-E 3 giúp tôi hiểu giới hạn của AI.
+            </p>
+            <p>
+                <strong>Thách thức lớn nhất:</strong> DALL-E 3 vẽ ra code vô nghĩa → phải phát hiện lỗi, xóa, tự gõ lại Java chuẩn xác. 
+                Tích hợp 6 bài tập vào portfolio thống nhất, vừa đẹp vừa dễ sử dụng.
+            </p>
+            <div class="quote-mark">"Hiểu mới dùng" - Đó là triết lý của tôi trong thời đại AI</div>
         </div>
 
+        <div class="ai-principles glass-card" data-aos="fade-up">
+            <h3><i class="fas fa-shield-halved"></i> 7 Nguyên Tắc Đạo Đức AI Cá Nhân</h3>
+            <div class="principles-grid">
+                <div class="principle-item">
+                    <h4>1. AI là Trợ lý</h4>
+                    <p>Không phó mặc hoàn toàn cho AI, tôi vẫn quyết định cuối cùng</p>
+                </div>
+                <div class="principle-item">
+                    <h4>2. Hiểu Mới Dùng</h4>
+                    <p>Trước khi copy-paste, phải hiểu logic và mục đích</p>
+                </div>
+                <div class="principle-item">
+                    <h4>3. Kiểm Chứng Chéo</h4>
+                    <p>Kiểm tra output AI bằng tài liệu khác, không tin 100%</p>
+                </div>
+                <div class="principle-item">
+                    <h4>4. Bảo Mật</h4>
+                    <p>Không nạp dữ liệu nhạy cảm (SSN, password) vào Public Cloud</p>
+                </div>
+                <div class="principle-item">
+                    <h4>5. Minh Bạch</h4>
+                    <p>Công khai 100% sử dụng AI trong mã nguồn, bài viết</p>
+                </div>
+                <div class="principle-item">
+                    <h4>6. Tư Duy Cốt Lõi</h4>
+                    <p>Phát triển khả năng suy luận độc lập, không bị teo não</p>
+                </div>
+                <div class="principle-item">
+                    <h4>7. Cá Nhân Hóa</h4>
+                    <p>Điều chỉnh prompt theo ngữ cảnh, mục tiêu cá nhân</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- SUMMARY -->
-
-    <section id="summary">
-
-        <div class="section-title">
-
-            <h2>Tổng Kết</h2>
-
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Liên Hệ Trực Tiếp</h2>
+            <p>Gửi tin nhắn ngay để thảo luận dự án, lớp học, hoặc cơ hội thực tập.</p>
         </div>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-
-                <div class="timeline-content">
-
-                    <h3>Bắt Đầu Học</h3>
-
-                    <p>
-
-                        Làm quen với công nghệ số,
-                        AI và các công cụ hiện đại.
-
-                    </p>
-
-                </div>
-
+        <div class="contact-grid glass-card" data-aos="fade-up" data-aos-duration="1000">
+            <div class="contact-details">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p>Nếu bạn muốn trao đổi về game development, AI hoặc các báo cáo môn học, hãy gửi tin nhắn ngay.</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> maivanthuan31082007@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +84 123 456 789</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</li>
+                </ul>
             </div>
-
-            <div class="timeline-item">
-
-                <div class="timeline-content">
-
-                    <h3>Phát Triển Kỹ Năng</h3>
-
-                    <p>
-
-                        Nâng cao kỹ năng tìm kiếm,
-                        làm việc nhóm và Prompt AI.
-
-                    </p>
-
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <label for="contactName">Họ Tên</label>
+                    <input type="text" id="contactName" name="contactName" placeholder="Nhập họ tên" required>
                 </div>
-
-            </div>
-
-            <div class="timeline-item">
-
-                <div class="timeline-content">
-
-                    <h3>Định Hướng Tương Lai</h3>
-
-                    <p>
-
-                        Tiếp tục học tập AI,
-                        VR/AR và phát triển game.
-
-                    </p>
-
+                <div class="form-row">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" name="contactEmail" placeholder="Nhập email" required>
                 </div>
-
-            </div>
-
+                <div class="form-row">
+                    <label for="contactSubject">Chủ Đề</label>
+                    <input type="text" id="contactSubject" name="contactSubject" placeholder="Chủ đề liên hệ" required>
+                </div>
+                <div class="form-row">
+                    <label for="contactMessage">Nội Dung</label>
+                    <textarea id="contactMessage" name="contactMessage" rows="5" placeholder="Viết nội dung..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi Tin Nhắn</button>
+            </form>
         </div>
-
     </section>
 
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <div class="section-title">
-
-            <h2>Liên Hệ</h2>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Liên Hệ</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:maivanthuan31082007@gmail.com" title="Email"><i class="fas fa-envelope"></i> maivanthuan31082007@gmail.com</a></li>
+                    <li><a href="https://github.com/SOL-Law" target="_blank" title="GitHub"><i class="fab fa-github"></i> github.com/SOL-Law</a></li>
+                    <li><a href="https://www.facebook.com/share/1BVrVRRhrX/?mibextid=wwXIfr" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Thông Tin</h4>
+                <p>Mã SV: <strong>25020411</strong></p>
+                <p>Lớp: <strong>IT2</strong> | Năm: <strong>2026</strong></p>
+            </div>
         </div>
-
-        <form class="contact-form"
-            id="contactForm">
-
-            <input type="text"
-                id="name"
-                placeholder="Họ và tên">
-
-            <input type="email"
-                id="email"
-                placeholder="Email">
-
-            <textarea rows="6"
-                id="message"
-                placeholder="Nội dung"></textarea>
-
-            <button type="submit"
-                class="btn">
-
-                <i class="fas fa-paper-plane"></i>
-                Gửi Liên Hệ
-
-            </button>
-
-        </form>
-
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <h3>Mai Văn Thuần</h3>
-
-        <p>
-
-            Portfolio học phần Nhập môn Công nghệ số
-            và Ứng dụng AI
-
-        </p>
-
-        <div class="footer-socials">
-
-            <a href="https://github.com/SOL-Law"
-                target="_blank">
-
-                <i class="fab fa-github"></i>
-
-            </a>
-
-            <a href="https://www.facebook.com/share/1BVrVRRhrX/?mibextid=wwXIfr"
-                target="_blank">
-
-                <i class="fab fa-facebook"></i>
-
-            </a>
-
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mai Văn Thuần. Thiết kế với <span class="heart">❤️</span> bằng <span class="code">HTML, CSS, JS</span> & AI Ethics.</p>
         </div>
-
-        <p>
-
-            © 2026 Mai Văn Thuần. All Rights Reserved.
-
-        </p>
-
     </footer>
 
-    <!-- BACK TO TOP -->
-
-    <button id="backToTop">
-
-        <i class="fas fa-arrow-up"></i>
-
-    </button>
-
-    <!-- SCRIPT -->
-
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
