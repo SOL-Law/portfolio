@@ -51,9 +51,9 @@
 
 /* Light Mode Theme */
 body.light-mode {
-    --bg-primary: #faf2e8;
-    --bg-secondary: #f1e7dc;
-    --text: #2f3a48;
+    --bg-primary: #eef4ff;
+    --bg-secondary: #e4ecff;
+    --text: #1f2a44;
     --text-secondary: #556675;
     --card-bg: rgba(255, 255, 255, 0.88);
     --card-border: rgba(148, 163, 184, 0.16);
